@@ -2,12 +2,14 @@ import { useState } from "react";
 import InstagramLogo from "./InstagramLogo";
 import SignUp from "./SignUpForm";
 import Login from "./LogInForm";
+import { Link } from "react-router-dom";
 
-const Test = () => {
+const Instagram = () => {
   const [loggedIn, setLoggedIn] = useState(true);
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-gradient-to-r from-[#feada6] to-[#f5efef]">
+    <div className="h-screen w-full flex flex-col gap-5 items-center justify-center bg-gradient-to-r from-[#feada6] to-[#f5efef]">
+      <Link className="bg-orange-500 hover:bg-orange-600 text-center px-5 py-2 font-semibold text-white text-lg rounded-md" to='/'>Home</Link>
       <div className="w-80 shadow-xl rounded-lg border-black flex flex-col items-center justify-center gap-5 py-10 px-5 bg-white">
         <InstagramLogo />
         {loggedIn ? <SignUp /> : <Login />}
@@ -46,4 +48,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Instagram;

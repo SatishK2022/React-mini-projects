@@ -1,9 +1,10 @@
-import ReactDOM from 'react-dom/client'
-import Instagram from './Instagram.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import ReactDOM from 'react-dom/client'
 import Home from './App.jsx'
-import Counter from './Counter.jsx'
+import Instagram from './components/Instagram/Instagram.jsx'
+import Counter from './components/Counter/Counter.jsx'
+import Todo from './components/Todo_App/Todo.jsx'
 
 const appRouter = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const appRouter = createBrowserRouter([
   {
     path: '/counter',
     element: <Counter />
+  },
+  {
+    path: '/todo',
+    element: <Todo />
   }
 ])
 
